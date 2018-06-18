@@ -4,7 +4,7 @@
 <div class="container">
     {%include 'carousel.html'%}
     <h1>What we are about</h1>
-    <h5>Science, Technology, Engineering and Math learning for kids in a fun and real-life application way.<br> Science is Fun!</h5>
+    <h5 class='about' >Science, Technology, Engineering and Math learning for kids in a fun and real-life application way.<br><strong>Science is Fun!</strong> </h5>
     <h1>Our five learning centers focus on  these pillars</h1>
     <div class="row">
       <div class="col-md-8">
@@ -50,10 +50,10 @@
         <p>centrally located at Lavington 891 Amboseli Road, off Convent Drive,Lavington. The Little Einssteins lab is an engaging and learning environment for our little explorers!</p>
         <h4><strong>In-school Workshop</strong></h4>
         <p>We offer workshops at kindergatens, primary and grade schools. Our scientists and lab Assistants bring all the equipment to engage our little explorers while in their learning instutions.</p>
-        <img src="/static/img/IMG_6611.jpg" alt="" height='300' width="350">
+        <img class='do' src="/static/img/IMG_6611.jpg" alt="" height='300' width="450">
       </div>
       <div class="col-md-6">
-        <img src="/static/img/IMG_6309.jpg" alt="" height='300' width="350">
+        <img class='do' src="/static/img/IMG_6309.jpg" alt="" height='300' width="450">
         <h4><strong>Holiday Camps</strong></h4>
         <p>What more fun our Science Explorers have then signing up for holiday camp! We engage your children over 5 days of the holiday in Science Activities. Kabi and Sasha love the holidays</p>
         <h4><strong>Special Events</strong></h4>
@@ -69,6 +69,20 @@
     }
     .card{
       box-shadow: 1px 1px 10px #000;
+      border-radius: 20px;
+    }
+    h1{
+      text-align: center;
+      font-family: "Times New Roman"
+    }
+    h4{
+      font-family: "Times New Roman"
+    }
+    p{
+      font-family:'Arial'
+    }
+    .do{
+      border-radius: 5px;
     }
   </style>
   {%endblock%}

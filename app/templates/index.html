@@ -1,5 +1,8 @@
 {%extends 'base.html'%}{%load static%} {%block content%} {% load bootstrap3 %}
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" />
 </head>
 <body>
@@ -52,10 +55,10 @@
         <p>centrally located at Lavington 891 Amboseli Road, off Convent Drive,Lavington. The Little Einssteins lab is an engaging and learning environment for our little explorers!</p>
         <h4><strong>In-school Workshop</strong></h4>
         <p>We offer workshops at kindergatens, primary and grade schools. Our scientists and lab Assistants bring all the equipment to engage our little explorers while in their learning instutions.</p>
-        <img class='do' src="/static/img/IMG_6201.jpg" alt="" height='300' width="450">
+        <img class='do' src="/static/img/IMG_6201.jpg" alt="" height='60%' width="85%">
       </div>
       <div class="col-md-6">
-        <img class='do' src="/static/img/IMG_6347.jpg" alt="" height='300' width="450">
+        <img class='do' src="/static/img/IMG_6347.jpg" alt="" height='60%' width="85%">
         <h4><strong>Holiday Camps</strong></h4>
         <p>What more fun our Science Explorers have then signing up for holiday camp! We engage your children over 5 days of the holiday in Science Activities. Kabi and Sasha love the holidays</p>
         <h4><strong>Special Events</strong></h4>
@@ -99,5 +102,28 @@
     .tentotwelf{
     color:  orange;
     }
+    /* Tablet Landscape */
+    @media screen and (max-width: 1060px) {
+        #primary { width:67%; }
+        #secondary { width:30%; margin-left:3%;}
+    }
+
+    /* Tabled Portrait */
+    @media screen and (max-width: 768px) {
+        #primary { width:100%; }
+        #secondary { width:100%; margin:0; border:none; }
+    }
+    img { max-width: 100%; }
+    @media (min-device-width:600px) {
+    img[data-src-600px] {
+        content: attr(data-src-600px, url);
+    }
+}
+
+@media (min-device-width:800px) {
+    img[data-src-800px] {
+        content: attr(data-src-800px, url);
+    }
+}
   </style>
   {%endblock%}

@@ -8,16 +8,14 @@
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <input id="tab1" type="radio" name="tabs">
-    <label class="one" data-target="#myCarousel" data-slide-to="0" for="tab1">How Kids Learn</label>
+  <div class="table">
+  <ul id="horizontal-list" class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"><button style="height:50px;width:200px" class="btn btn-danger">How Kids learn</button></li>
+    <li data-target="#myCarousel" data-slide-to="1"><button style="height:50px;width:200px" class="btn btn-primary">What We Teach</button></li>
+    <li data-target="#myCarousel" data-slide-to="2"><button style="height:50px;width:200px" class="btn btn-success">Why We Are Different</button></li>
+  </ul>
+  </div>
 
-    <input id="tab2" type="radio" name="tabs">
-    <label class="two" data-target="#myCarousel" data-slide-to="1" for="tab2">What We Teach</label>
-
-  <input id="tab3" type="radio" name="tabs">
-  <label class="three" data-target="#myCarousel" data-slide-to="2" for="tab3">Why We Are Different</label>
-    </ul>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
@@ -59,34 +57,38 @@
 
 </body>
 <style media="screen">
-input {
+@media screen and (max-width: 650px) {
+  .carousel-caption{
+    font-size: 8px;
+  }
+
+.carousel-indicators{
   display: none;
 }
 
-label {
-  display: inline-block;
-  margin: 0 0 2px;
-  font-weight: 600;
+.carousel-caption-body{
   color: white;
-  background-color: yellow;
-  border: 10px solid transparent;
-  width: 30%
+  font-size: 10%;
 }
+  }
+  .table {
+  	display: table;
+  	margin: 0 auto;
+  }
+  ul#horizontal-list {
+  	min-width: 696px;
+  	list-style: none;
+  	padding-top: 2px;
+  	}
+  	ul#horizontal-list li {
+  		display: inline;
+  	}
 label:hover {
   color: #888;
   cursor: pointer;
 }
-
-@media screen and (max-width: 650px) {
-  label {
-    font-size: 0;
-  }
-  label:before {
-    margin: 0;
-    font-size: 5px;
-  }
   .carousel-caption-heading{
-    font-family: "Love Ya Like A Sister";
+  font-family: "Love Ya Like A Sister";
   left: 0%;
   top: 0%;
   font-size: 100%;
@@ -97,21 +99,6 @@ label:hover {
   }
 }
 
-@media screen and (max-width: 400px) {
-  label {
-    padding: 2px;
-  }
-  .carousel-caption-heading{
-    font-family: "Love Ya Like A Sister";
-  left: 0%;
-  top: 0%;
-  font-size: 100%;
-  }
-  .carousel-caption-body{
-    color: white;
-    font-size: 60%;
-  }
-}
 .one{
   background-color: red;
 }
@@ -125,7 +112,7 @@ label:hover {
   font-family: "Love Ya Like A Sister";
 left: 0%;
 top: 0%;
-font-size: 350%;
+font-size: 280%;
 }
 .carousel-caption{
   position: absolute;
@@ -139,5 +126,6 @@ font-size: 350%;
 .carousel-inner > .item > img {
   width: 80%;
   margin: auto;
+
 </style>
   {%endblock%}

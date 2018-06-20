@@ -1,19 +1,19 @@
 {%extends 'base.html'%}{%load static%} {%block content%} {% load bootstrap3 %}
 
 <body>
+  <div class="dont">
 
-  <div class="meals">
-    <div class="well">
+
       <!-- Nav Tabs -->
       <ul class="nav nav-tabs nav-justified" role="tablist">
-        <li role="presentation" class="active"><a href="#fastFoodMenu" aria-controls="fastFoodMenu" role="tab" data-toggle="tab">SlideShow Gallery</a></li>
+        <li role="presentation" class="slide"><a href="#fastFoodMenu" aria-controls="fastFoodMenu" role="tab" data-toggle="tab">SlideShow Gallery</a></li>
 
       </ul>
 
       <!-- Wrapper for slides -->
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active" id="fastFoodMenu">
-          <div id="carousel1" class="carousel slide" data-ride="carousel">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="item active">
                 <div class="col-md-4">
@@ -22,12 +22,14 @@
                     <h4 class="carousel-caption-body">Conducive Environment</h4>
                    </div>
                 </div>
+              <p></p>
                 <div class="col-md-4">
                   <img src="/static/img/IMG_5875.jpg" alt="Chicken Pizza">
                   <div class="carousel-caption">
                     <h4 class="carousel-caption-body">Spacious, Fun and Safe Play Area</h4>
                    </div>
                 </div>
+                <p></p>
                 <div class="col-md-4">
                   <img src="/static/img/IMG_5947.jpg" alt="Beef Pizza">
                   <div class="carousel-caption">
@@ -42,12 +44,14 @@
                     <h4 class="carousel-caption-body">Guidance and Assistance</h4>
                    </div>
                 </div>
+                <p></p>
                 <div class="col-md-4">
                   <img src="/static/img/IMG_6122.jpg" alt="Beef Pizza">
                   <div class="carousel-caption">
                     <h4 class="carousel-caption-body">Efficiently Equiped</h4>
                    </div>
                 </div>
+                <p></p>
                 <div class="col-md-4">
                   <img src="/static/img/IMG_6207.jpg" alt="Beef Pizza">
                   <div class="carousel-caption">
@@ -63,12 +67,14 @@
                     <h4 class="carousel-caption-body">Interpersonal Skills</h4>
                    </div>
                 </div>
+              <p></p>
                 <div class="col-md-4">
                   <img src="/static/img/IMG_5988.jpg" alt="Beef Pizza">
                   <div class="carousel-caption">
                     <h4 class="carousel-caption-body">Exands Growth</h4>
                    </div>
                 </div>
+                <p></p>
                 <div class="col-md-4">
                   <img src="/static/img/IMG_6112.jpg" alt="Beef Pizza">
                   <div class="carousel-caption">
@@ -76,15 +82,21 @@
                    </div>
                 </div>
               </div>
-
+          <br>
             </div>
           </div>
         </div>
-
+        </div>
+</div>
 </body>
 <style media="screen">
 .item img {
 width: 100%;
+}
+@media screen and (max-width: 650px) {
+
+.tab-content, .dont{
+  display: none;
 }
 </style>
 {%endblock%}

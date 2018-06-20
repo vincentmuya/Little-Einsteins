@@ -1,16 +1,23 @@
 {%extends 'base.html'%}{%load static%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+</head>
 <body>
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
-  <!-- <div class="table">
-  <ul id="horizontal-list" class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"><button style="height:50%;width:20%" class="btn btn-danger">How Kids learn</button></li>
-    <li data-target="#myCarousel" data-slide-to="1"><button style="height:50%;width:22%" class="btn btn-primary">What We Teach</button></li>
-    <li data-target="#myCarousel" data-slide-to="2"><button style="height:50%;width:22%" class="btn btn-success">Why We Are Different</button></li>
-  </ul>
-  </div> -->
+  <ul class="carousel-indicators">
+    <input id="tab1" type="radio" name="tabs">
+    <label class="one" data-target="#myCarousel" data-slide-to="0" for="tab1">How Kids Learn</label>
+
+    <input id="tab2" type="radio" name="tabs">
+    <label class="two" data-target="#myCarousel" data-slide-to="1" for="tab2">What We Teach</label>
+
+  <input id="tab3" type="radio" name="tabs">
+  <label class="three" data-target="#myCarousel" data-slide-to="2" for="tab3">Why We Are Different</label>
+    </ul>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
@@ -52,23 +59,73 @@
 
 </body>
 <style media="screen">
-/*.table {
-	display: table;
-	margin: 0 auto;
+input {
+  display: none;
 }
 
-ul#horizontal-list {
-	min-width: 696px;
-	list-style: none;
-	padding-top: 2px;
-	}
-	ul#horizontal-list li {
-		display: inline;
-	}*/
+label {
+  display: inline-block;
+  margin: 0 0 2px;
+  font-weight: 600;
+  color: white;
+  background-color: yellow;
+  border: 10px solid transparent;
+  width: 30%
+}
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 5px;
+  }
+  .carousel-caption-heading{
+    font-family: "Love Ya Like A Sister";
+  left: 0%;
+  top: 0%;
+  font-size: 100%;
+  }
+  .carousel-caption-body{
+    color: white;
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 2px;
+  }
+  .carousel-caption-heading{
+    font-family: "Love Ya Like A Sister";
+  left: 0%;
+  top: 0%;
+  font-size: 100%;
+  }
+  .carousel-caption-body{
+    color: white;
+    font-size: 60%;
+  }
+}
+.one{
+  background-color: red;
+}
+.two{
+  background-color: blue;
+}
+.three{
+  background-color: green
+}
 .carousel-caption-heading{
   font-family: "Love Ya Like A Sister";
 left: 0%;
 top: 0%;
+font-size: 350%;
 }
 .carousel-caption{
   position: absolute;

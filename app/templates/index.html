@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="col-md-3">
-        <img src="/static/img/KABI.png" alt="" height='300' width="250">
+        <img class="kabi" src="/static/img/KABI.png" alt="" height='300' width="250">
       </div>
     </div>
     <h1>How we do what we do</h1>
@@ -102,28 +102,54 @@
     .tentotwelf{
     color:  orange;
     }
-    /* Tablet Landscape */
-    @media screen and (max-width: 1060px) {
-        #primary { width:67%; }
-        #secondary { width:30%; margin-left:3%;}
-    }
-
-    /* Tabled Portrait */
-    @media screen and (max-width: 768px) {
-        #primary { width:100%; }
-        #secondary { width:100%; margin:0; border:none; }
-    }
-    img { max-width: 100%; }
-    @media (min-device-width:600px) {
-    img[data-src-600px] {
-        content: attr(data-src-600px, url);
-    }
+    @media screen and (max-width: 650px) {
+      .card{
+        box-shadow: 1px 1px 10px #000;
+        border-radius: 20px;
+        width: 245px;
+        height: 310px;
+      }
+      h1{
+        text-align: center;
+        font-family: "Love Ya Like A Sister";
+        font-size: 15px;
+      }
+      h4{
+        font-family: "Times New Roman";
+        font-size: 0%
+      }
+      h5{
+        font-size: 6px;
+      }
+      h4{
+        font-size: 10px;
+      }
+      h2{
+        font-size: 10px;
+      }
+      p{
+        font-size: 6px;
+      }
+      li{
+        font-size: 6px;
+      }
+      .kabi{
+        width: 90px;
+        height: 100px;
+        float: right;
+        margin-right: 20px;
+      }
+      .do{
+        width: 100px;
+        height: 100px;
+        float: left;
+      }
 }
 
-@media (min-device-width:800px) {
-    img[data-src-800px] {
-        content: attr(data-src-800px, url);
-    }
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
 }
   </style>
   {%endblock%}

@@ -1,33 +1,51 @@
+{% load bootstrap3 %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+#navbar {
+  background-color: orange;
+  top: -50px;
+  width: 100%;
+  display:block;
+  transition: top 0.3s;
+}
 
-      <a class="navbar-brand" href=""><img src="/static/img/logo.png" alt="" height="100" width="90"></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"></a></li>
-
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<style media="screen">
-  .navbar-default{
-    background-color: orange;
-  }
-a{
+#navbar a {
+  float: left;
+  display: block;
   color: black;
-  font-size: 20px;
-  font-family: "Love Ya Like A Sister";
+  font-family: "Times New Roman";
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 </style>
+</head>
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <a href="">Home</a>
+  <a href="#about">About</a>
+</div>
+
+{% block scripts %}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   {% bootstrap_javascript %}
+   <script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+} else {
+    document.getElementById("navbar").style.top = "-50px";
+}
+}
+</script>
+  {% endblock %}

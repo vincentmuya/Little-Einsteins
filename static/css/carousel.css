@@ -1,0 +1,52 @@
+@media screen and (max-width: 650px) {
+  .carousel-caption{
+    font-size: 8px;
+  }
+
+.carousel-indicators{
+  display: none;
+}
+
+.carousel-caption-body{
+  color: white;
+  font-size: 10%;
+}
+  }
+  ul#horizontal-list {
+  	min-width: 696px;
+  	list-style: none;
+  	padding-top: 2px;
+  	}
+  	ul#horizontal-list li {
+  		display: inline;
+  	}
+  .carousel-caption-heading{
+  font-family: "Love Ya Like A Sister";
+  left: 0%;
+  top: 0%;
+  font-size: 100%;
+  }
+  .carousel-caption-body{
+    color: white;
+    font-size: 60%;
+  }
+.carousel-caption-heading{
+  font-family: "Love Ya Like A Sister";
+left: 0%;
+top: 0%;
+font-size: 280%;
+}
+.carousel-caption{
+  position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.carousel-caption-body{
+  color: white;
+  font-size: 145%;
+}
+.carousel-inner > .item > img {
+  width: 80%;
+  margin: auto;
+}
+</style>

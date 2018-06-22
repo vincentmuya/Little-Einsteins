@@ -1,3 +1,8 @@
+{%load staticfiles%}
+
+{%block styles%}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+{% endblock %}
 
 <div style="position: relative;" class="panel panel-default">
   <div class="" style="position: absolute;">
@@ -27,33 +32,24 @@
  </div>
 {%include 'carousel.html'%}
 </div>
-
 <style media="screen">
-header{
-  background-color: white;
-  width: 180px;
-  margin-left: 45px;
-  border-radius: 70px;
-  height: 150px;
-  padding-top: 5px;
-}
-.logo{
-  margin-left: 25px;
-}
-.w3-panel{
-  background-color:#4da6ff;
-  height: 50px;
-}
-.panel-body{
-  text-align: center;
-  height: 40px;
-  background-color: white;
-}
-.panael-menu{
-  font-family: "Lato";
-  display: inline;
-  padding: 10px;
-  /*font-size: 15px;*/
+@media screen and (max-width: 650px) {
+  header{
+    background-color: white;
+    width: 70px;
+    margin-left: 10px;
+    border-radius: 70px;
+    height: 65px;
 
+    padding-top: 5px;
+  }
+  .logo{
+    margin-left: 3px;
+    height: 60px;
+    width: 60px;
+  }
+  .panael-menu{
+    font-size: 10px;
+  }
 }
 </style>

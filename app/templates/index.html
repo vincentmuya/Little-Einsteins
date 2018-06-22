@@ -1,4 +1,7 @@
-{%extends 'base.html'%}{%load static%} {%block content%} {% load bootstrap3 %}
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+{%block styles%}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -71,98 +74,46 @@
       {%include 'footer.html'%}
   </body>
   <style media="screen">
-    body{
-      padding-top: 5px;
-    }
-    a{
-      color: black;
-    }
+  p{
+    font-family:'Arial'
+  }
+  h1{
+    text-align: center;
+    font-family: "Love Ya Like A Sister";
+  }
+  @media screen and (max-width: 650px) {
     .card{
       box-shadow: 1px 1px 10px #000;
       border-radius: 20px;
+      width: 245px;
+      height: 470px;
     }
     h1{
       text-align: center;
       font-family: "Love Ya Like A Sister";
+      font-size: 20px;
     }
     h4{
       font-family: "Times New Roman";
+      font-size: 15px
     }
-    p{
-      font-family:'Arial'
+    h5, p , li{
+      font-size: 12px;
+    }
+    h4{
+      font-size: 15px;
+    }
+    h2{
+      font-size: 20px;
+    }
+    .kabi{
+      display: none;
     }
     .do{
-      border-radius: 5px;
+      width: 200px;
+      height: 200px;
+      float: left;
     }
-    .onetothree{
-      color: red;
-    }
-    .threetosix{
-      color: blue;
-    }
-    .seventonine{
-    color:  green;
-    }
-    .tentotwelf{
-    color:  orange;
-    }
-    @media screen and (max-width: 650px) {
-      .card{
-        box-shadow: 1px 1px 10px #000;
-        border-radius: 20px;
-        width: 245px;
-        height: 470px;
-      }
-      h1{
-        text-align: center;
-        font-family: "Love Ya Like A Sister";
-        font-size: 20px;
-      }
-      h4{
-        font-family: "Times New Roman";
-        font-size: 15px
-      }
-      h5, p , li{
-        font-size: 12px;
-      }
-      h4{
-        font-size: 15px;
-      }
-      h2{
-        font-size: 20px;
-      }
-      .kabi{
-        display: none;
-      }
-      .do{
-        width: 200px;
-        height: 200px;
-        float: left;
-      }
-      .logo{
-        margin-left: 50px;
-        height:90px ;
-        width:70px ;
-      }
-      .w3-panel{
-        background-color:#4da6ff;
-        height: 30px;
-      }
-      .panel-body{
-        text-align: center;
-        height: 25px;
-      }
-      .panael-menu{
-        font-family: "Times New Roman";
-        display: inline;
-        padding: 10px;
-        font-size: 10px;
-}
-
-@media screen and (max-width: 400px) {
-  label {
-    padding: 15px;
   }
-}
   </style>
   {%endblock%}

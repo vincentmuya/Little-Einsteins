@@ -1,5 +1,9 @@
-{%extends 'base.html'%}{%load static%} {%block content%} {% load bootstrap3 %}
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
 
+
+{%block styles%}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% endblock %}
 <body>
   <div class="dont">
 
@@ -82,15 +86,4 @@
         </div>
 </div>
 </body>
-<style media="screen">
-.item img {
-width: 100%;
-}
-
-@media screen and (max-width: 650px) {
-
-.tab-content, .dont{
-  display: none;
-}
-</style>
 {%endblock%}

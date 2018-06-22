@@ -6,31 +6,7 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" />
 </head>
 <body>
-  <div style="position: relative;" class="panel panel-default">
-    <div class="" style="position: absolute;">
-      <div class="row">
-        <div class="col-md-5">
-          </div>
-          <div class="col-md-7">
-        <img class="logo" src="/static/img/logo.png" alt="" height='140px' width="120">
-      </div>
-      </div>
-    </div>
-    <div class="w3-panel w3-red">
-      <br>
-      <br>
-      <br>
-  <p></p>
-</div>
-   <div class="panel-body">
-     <ul class="panel-list">
-     <li class="panael-menu" ><a href="">Home <span class="sr-only">(current)</span></a></li>
-     <li class="panael-menu"><a href="#about">About</a></li>
-   </ul></div>
-   <br>
-   {%include 'carousel.html'%}
- </div>
-
+  {%include 'header.html'%}
  <div class="container">
     <h1 id='about'>What we are about</h1>
     <h5 class='about' >Science, Technology, Engineering and Math learning for kids in a fun and real-life application way.<br><strong>Science is Fun!</strong> </h5>
@@ -97,24 +73,6 @@
   <style media="screen">
     body{
       padding-top: 5px;
-    }
-    .logo{
-      margin-left: 50px;
-    }
-    .w3-panel{
-      background-color:#4da6ff;
-      height: 70px;
-    }
-    .panel-body{
-      text-align: center;
-      height: 35px;
-    }
-    .panael-menu{
-      font-family: "Times New Roman";
-      display: inline;
-      padding: 10px;
-      font-size: 20px;
-
     }
     a{
       color: black;

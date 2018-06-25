@@ -7,3 +7,6 @@ def index(request):
 
 def program(request):
     return render(request, 'program.html')
+
+def about(request):
+    return render(request, 'about.html')

@@ -11,12 +11,24 @@
 <body>
   {%include 'header.html'%}
   {%include 'carousel.html'%}
+  <br>
  <div class="container">
-    <h1 id='about'>What we are about</h1>
-    <h5 class='about' >Science, Technology, Engineering and Math learning for kids in a fun and real-life application way.<br><strong>Science is Fun!</strong> </h5>
-
+   <div class="row">
+     <div class="col-md-4">
+       <h1 id='about'>What we are about</h1>
+       <h5 class='about' >Science, Technology, Engineering and Math learning for kids in a fun and real-life application way.<br><strong>Science is Fun!</strong> </h5>
+      </div>
+      <div class="col-md-1">
+       <div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br>
+       <div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br><div class="vl"></div><br>
+      <div class="vl"></div>
+       </div>
+     <div class="col-md-7">
+      <img class='do' src="/static/img/IMG_6347.jpg" alt="" height='60%' width="85%">
+     </div>
+   </div>
+      <br>
     </div>
-  </div>
   {%include 'gallery.html'%}
   <p></p>
       {%include 'footer.html'%}
@@ -29,6 +41,11 @@
     text-align: center;
     font-family: "Love Ya Like A Sister";
   }
+  .vl {
+    border-right: 2px solid grey;
+    height: 5px;
+    border-radius: 50px;
+}
   @media screen and (max-width: 650px) {
     .card{
       box-shadow: 1px 1px 10px #000;

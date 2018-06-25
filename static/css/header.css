@@ -19,12 +19,14 @@ header{
   text-align: center;
   height: 40px;
   background-color: white;
-}
-.panael-menu{
+  color: black;
   font-family: "Lato";
   display: inline;
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px;
+}
+.panael-menu{
+
   /*font-size: 15px;*/
 
 }

@@ -22,7 +22,7 @@
 </div>
  <div class="panel-body">
    <ul class="panel-list">
-   <h3 class="panael-menu" ><a href="">Our Programs & Events <span class="sr-only">(current)</span></a></h3>
+   <h3 class="panael-menu" ><a href="{%url 'program'%}">Our Programs & Events <span class="sr-only">(current)</span></a></h3>
    <h3 class="panael-menu"><a href="#">What Kids Learn</a></h3>
    <h3 class="panael-menu"><a href="#about">About Us</a></h3>
  </ul></div>
@@ -30,9 +30,11 @@
    <br>
    <br>
  </div>
-{%include 'carousel.html'%}
 </div>
 <style media="screen">
+a{
+  color: black;
+}
 @media screen and (max-width: 650px) {
   header{
     background-color: white;
@@ -49,7 +51,12 @@
     width: 60px;
   }
   .panael-menu{
-    font-size: 10px;
+    font-size: 8px;
+    height: 20px;
+  }
+  .w3-panel{
+    background-color:#4da6ff;
+    height: 30px;
   }
 }
 </style>

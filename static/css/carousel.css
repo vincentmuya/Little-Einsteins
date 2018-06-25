@@ -46,7 +46,7 @@ font-size: 280%;
   font-size: 145%;
 }
 .carousel-inner > .item > img {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 </style>

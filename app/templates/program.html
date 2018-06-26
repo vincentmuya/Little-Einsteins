@@ -1,8 +1,10 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
 
-<body>
   {%include 'header.html'%}
-  <img class='prog' src="/static/img/IMG_6347.jpg" alt="" height='500px' width="90%">
+  <div class="program">
+    <img class='prog' src="/static/img/IMG_6173.jpg" alt="" height='500px' width="90%">
+    <div class="top-right"><h1>Our Little Explorers <br>Programs & Events</h1></div>
+  </div>
   <div class="container">
     <h1>Our five learning centers focus on  these pillars</h1>
     <div class="row">
@@ -42,7 +44,7 @@
       </div>
     </div>
     <h1>How we do what we do</h1>
-    <h5>Little Einsteins, believes that Science Exploration in young children begins with Fun and sets the basis for a lifelong interest and knowledge of Science, technology, engineering and mathematics. Through relatable experiences and stories of `KABI’ the Science Kid and `SASHA’ the Stemette. <br><strong>We teach in the below formats.</strong></h5>
+    <h2><strong>Our Teaching Formats:</strong></h2> <hr>
     <div class="row">
       <div class="col-md-6">
         <h4><strong>Our LAB workshop</strong></h4>
@@ -52,15 +54,25 @@
         <img class='do' src="/static/img/IMG_6201.jpg" alt="" height='60%' width="85%">
       </div>
       <div class="col-md-6">
-        <img class='do' src="/static/img/IMG_6347.jpg" alt="" height='60%' width="85%">
+        <img class='do' src="/static/img/IMG_6007.jpg" alt="" height='60%' width="85%">
         <h4><strong>Holiday Camps</strong></h4>
         <p>What more fun our Science Explorers have then signing up for holiday camp! We engage your children over 5 days of the holiday in Science Activities. Kabi and Sasha love the holidays</p>
         <h4><strong>Special Events</strong></h4>
         <p>Are you having a birthday party for your Little One? Invite our Scientists and Lab Assistants to engage the children in silly and fun Science! Edutainment has never been better! A party and learning all in one</p>
       </div>
   </div>
-</body>
+  </div>
+  {%include 'footer.html'%}
 <style media="screen">
+.program{
+  position: relative;
+}
+.top-right {
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 450px;
+}
 .prog{
   margin-left: 5%;
 }

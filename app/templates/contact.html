@@ -1,0 +1,37 @@
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+
+  {%include 'header.html'%}
+<div class="container">
+  <p>We always welcome questions, feedback and comments. You have any? Get in touch with us </p>
+  <h1>Contact Us</h1>
+  <div class="row">
+  <div class="col-md-8">
+    <form method="post" novalidate>
+      {% csrf_token %}
+        {% bootstrap_form form %}
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="col-md-4">
+    <div class="contact">
+      <h1>Contact Info</h1>
+      <p>891 Amboseli Road, Off Convent Drive, Lavington</p>
+      <p>P. O. Box: 1634 - 00100, Nairobi</p>
+      <p>Phone: +254 - 729 715 622</p>
+      <p>Email: littleeinsteinske@gmail.com</p>
+      <p>info@littleeinsteinsea.com</p>
+    </div>
+  </div>
+</div>
+</div>
+{%include 'footer.html'%}
+<style media="screen">
+  .prog{
+    margin-left: 5%;
+  }
+  .contact{
+    background-color: #f2f0f0;
+    border-radius: 10px;
+  }
+</style>
+{%endblock%}

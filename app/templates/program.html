@@ -2,8 +2,7 @@
 
   {%include 'header.html'%}
   <div class="program">
-    <img class='prog' src="/static/img/IMG_6173.jpg" alt="" height='500px' width="90%">
-    <div class="top-right"><h1>Our Little Explorers <br>Programs & Events</h1></div>
+    <img class='prog' src="/static/img/IMG_6173.jpg" alt="" height='600px' width="100%">
   </div>
   <div class="container">
     <h1>Our five learning centers focus on  these pillars</h1>
@@ -36,6 +35,7 @@
               <h2 class="tentotwelf">10-12 Years</h2>
               <p><strong>Carver Tweens</strong>- Named after George Washington Carver</p>
             </div>
+            <img src="/static/img/science.jpg" alt="" height="100px;" width="100px;">
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@
         <img class='do' src="/static/img/IMG_6201.jpg" alt="" height='60%' width="85%">
       </div>
       <div class="col-md-6">
-        <img class='do' src="/static/img/IMG_6007.jpg" alt="" height='60%' width="85%">
+        <img class='do2' src="/static/img/IMG_6007.jpg" alt="" height='60%' width="85%">
         <h4><strong>Holiday Camps</strong></h4>
         <p>What more fun our Science Explorers have then signing up for holiday camp! We engage your children over 5 days of the holiday in Science Activities. Kabi and Sasha love the holidays</p>
         <h4><strong>Special Events</strong></h4>
@@ -67,19 +67,6 @@
 .program{
   position: relative;
 }
-.top-right {
-    color: white;
-    position: absolute;
-    top: 8px;
-    right: 450px;
-}
-.prog{
-  margin-left: 5%;
-}
-.card{
-  box-shadow: 1px 1px 10px #000;
-  border-radius: 20px;
-}
 p{
   font-family:'Arial'
 }
@@ -87,7 +74,7 @@ h1{
   text-align: center;
   font-family: "Love Ya Like A Sister";
 }
-.do{
+.do, .do2{
   border-radius: 5px;
 }
 .onetothree{
@@ -101,6 +88,30 @@ color:  green;
 }
 .tentotwelf{
 color:  orange;
+}
+@media screen and (max-width: 650px) {
+  .prog{
+    width: 90%;
+    height: 200px;
+  }
+  h1{
+    font-size: 20px;
+  }
+  p, li, h5{
+    font-size: 12px;
+  }
+  h4{
+    font-size: 15px;
+  }
+  .kabi{
+    display: none;
+  }
+  h2{
+    font-size: 20px;
+  }
+  .do2{
+    display: none;
+  }
 }
 </style>
   {%endblock%}

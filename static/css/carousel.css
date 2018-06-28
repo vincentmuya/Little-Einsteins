@@ -1,17 +1,4 @@
-@media screen and (max-width: 650px) {
-  .carousel-caption{
-    font-size: 8px;
-  }
 
-.carousel-indicators{
-  display: none;
-}
-
-.carousel-caption-body{
-  color: white;
-  font-size: 10%;
-}
-  }
   ul#horizontal-list {
   	min-width: 696px;
   	list-style: none;

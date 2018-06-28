@@ -41,20 +41,40 @@
         </div>
   </div>
   <style media="screen">
+  @media screen and (max-width: 650px) {
+    #top{
+
+    }
+    .carousel-caption{
+      font-size: 8px;
+      color: white;
+      position: absolute;
+      bottom: 100px;
+      right: 10px;
+    }
+
+  .carousel-indicators{
+    display: none;
+  }
+
+  .carousel-caption-body{
+    color: white;
+    font-size: 40%;
+  }
+    }
   #top{
       color: white;
       position: absolute;
-      bottom: 500px;
-      right: 700px;
+      bottom: 650px;
+      right: 400px;
   }
   .carousel-caption{
   align-items: center;
   padding-bottom: 100px;
   }
   .carousel-inner > .item > img {
-    width:90%;
+    width:100%;
     height:500px;
-    padding-left: 5%;
   }
   ul#horizontal-list {
     min-width: 696px;

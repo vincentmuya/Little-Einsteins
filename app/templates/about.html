@@ -2,8 +2,7 @@
 
   {%include 'header.html'%}
   <div class="about">
-<img class='prog' src="/static/img/IMG_6127.jpg" alt="" height='500px' width="90%">
-  <div class="top-right"><h1>What Little Einsteins <br> Is About</h1></div>
+<img class='prog' src="/static/img/IMG_6127.jpg" alt="" height='600px' width="100%">
   </div>
 <p></p>
 <div class="container">
@@ -32,17 +31,8 @@
 </div>
 {%include 'footer.html'%}
 <style media="screen">
-.prog{
-  margin-left: 5%;
-}
 .about{
   position: relative;
-}
-.top-right {
-    color: white;
-    position: absolute;
-    top: 8px;
-    right: 450px;
 }
 h1{
   font-family: "Love Ya Like A Sister";
@@ -54,6 +44,21 @@ h1{
 }
 h2{
   text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .prog{
+    width: 90%;
+    height: 200px;
+  }
+  h1,h2{
+    font-size: 20px;
+  }
+  p, li, h5{
+    font-size: 12px;
+  }
+  .do{
+    display: none;
+  }
 }
 </style>
   {%endblock %}

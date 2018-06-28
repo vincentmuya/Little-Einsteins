@@ -20,6 +20,7 @@
  <div class="panel-body">
    <ul class="panel-list" id="horizontal">
    <li class="panael-menu" ><a href="{%url 'program'%}">Our Programs & Events</a></li>
+   <li class="panael-menu" ><a href="{%url 'enroll'%}">Enroll</a></li>
    <li class="panael-menu"><a href="{%url 'about'%}">About Us</a></li>
    <li class="panael-menu"><a href="{%url 'contact'%}">Contact</a></li>
  </ul>
@@ -54,7 +55,7 @@ header{
 }
 .w3-panel{
   background-color:#4da6ff;
-  height: 56px;
+  height: 58px;
   text-align: center;
 }
 
@@ -63,27 +64,36 @@ header{
   font-size: 20px;
 }
 @media screen and (max-width: 650px) {
+  ul#horizontal li {
+    display: inline;
+    list-style: none;
+    padding-bottom: 10px;
+    color: black;
+  }
   header{
     background-color: white;
-    width: 70px;
+    width: 75px;
     margin-left: 10px;
     border-radius: 70px;
-    height: 65px;
-
+    height: 70px;
     padding-top: 5px;
   }
+  .panel-body{
+    height: 40px;
+    padding-bottom: 30px;
+  }
   .logo{
-    margin-left: 3px;
+    margin-left: 5px;
     height: 60px;
     width: 60px;
   }
   .panael-menu{
-    font-size: 8px;
-    height: 20px;
+    font-size: 10px;
+
   }
   .w3-panel{
     background-color:#4da6ff;
-    height: 30px;
+    height: 25px;
   }
 }
 </style>

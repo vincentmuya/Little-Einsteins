@@ -3,6 +3,7 @@
   {%include 'header.html'%}
   <div class="container">
     <h1>Registration Form 2018-2019</h1>
+    <img class='enroll' src="/static/img/sliderArt.png" alt="" height='60%' width="85%">
     <form method="post" novalidate>
       {% csrf_token %}
       <h3>Child's name</h3>
@@ -12,4 +13,17 @@
   </div>
   <br>
   {%include 'footer.html'%}
+  <style media="screen">
+    .enroll{
+    height: 100px;
+    width: 300px;
+    float: right;
+    }
+    @media screen and (max-width: 650px) {
+      .enroll{
+        height: 50px;
+        width: 170px;
+      }
+    }
+  </style>
   {%endblock%}

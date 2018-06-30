@@ -8,6 +8,7 @@ class Contact(models.Model):
     name = models.CharField(max_length = 40)
     email = models.EmailField()
     phonenumber = models.IntegerField(null=True)
+    subject = models.CharField(max_length=40, null = True)
     questionfeedback = HTMLField()
 
     def __str__(self):
@@ -22,7 +23,7 @@ class level(models.Model):
 class Enroll(models.Model):
     firstname = models.CharField(max_length = 40)
     surname = models.CharField(max_length = 40)
-    dateofbirth = models.DateField(auto_now_add=True)
+    dateofbirth =  models.DateTimeField(auto_now_add=True)
     level = models.ManyToManyField(level)
     address = models.CharField(max_length = 40)
     parentgurdianname = models.CharField(max_length = 40)

@@ -5,7 +5,7 @@ from .models import Contact, Enroll, level
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ('name', 'email', 'phonenumber', 'questionfeedback')
+        fields = ('name', 'email', 'phonenumber', 'subject', 'questionfeedback')
 
 class EnrollForm(forms.ModelForm):
     class Meta:

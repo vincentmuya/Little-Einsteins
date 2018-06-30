@@ -31,6 +31,21 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+SERVER_EMAIL = 'vincentmuya13@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'vincent1115'
+EMAIL_HOST_USER = SERVER_EMAIL
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+ADMINS = [
+    ('Vincent', 'vincentmuya13@gmail.com'),
+    
+]
+
+MANAGERS = ADMINS
 
 INSTALLED_APPS = [
     'app',
@@ -52,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'

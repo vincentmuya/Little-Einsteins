@@ -14,7 +14,7 @@
   <p></p>
   <div class="banner">
     <img src="/static/img/little-banner.jpg" alt="" width="100%">
-    <button type="button" class="but"><a href="{%url 'program'%}">Our Programs & Events</a></button>
+    <button type="button" class="btn" id='but'><a href="{%url 'program'%}">Our Programs & Events</a></button>
   </div>
   <br>
  <div class="container">
@@ -51,7 +51,7 @@
   a{
     color: black;
   }
-  .but{
+  #but{
     position: absolute;
     margin-left: 700px;
     vertical-align: middle;
@@ -72,7 +72,6 @@
   .vl {
     border-right: 2px solid grey;
     height: 8px;
-    /*border-radius: 50px;*/
 }
   @media screen and (max-width: 650px) {
     .card{

@@ -1,0 +1,11 @@
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+
+<div class="container">
+  <h1>Sponsor Sign Up Form</h1>
+  <form method="post" novalidate>
+    {% csrf_token %}
+      {% bootstrap_form sform %}
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+  </div>
+  {%endblock%}

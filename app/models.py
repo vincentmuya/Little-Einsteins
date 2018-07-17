@@ -5,11 +5,11 @@ import datetime
 
 # Create your models here.
 class Contact(models.Model):
-    name = models.CharField(max_length = 40)
+    Name = models.CharField(max_length = 40)
     email = models.EmailField()
-    phonenumber = models.IntegerField(null=True)
+    Phone_Number = models.IntegerField(null=True)
     subject = models.CharField(max_length=40, null = True)
-    questionfeedback = HTMLField()
+    Question_or_Feedback = HTMLField()
 
     def __str__(self):
         return self.name
@@ -21,16 +21,22 @@ class level(models.Model):
         return self.level
 
 class Enroll(models.Model):
-    firstname = models.CharField(max_length = 40)
-    surname = models.CharField(max_length = 40)
+    Firstname = models.CharField(max_length = 40)
+    Surname = models.CharField(max_length = 40)
     dateofbirth =  models.DateTimeField(auto_now_add=True)
     level = models.ManyToManyField(level)
-    address = models.CharField(max_length = 40)
-    parentgurdianname = models.CharField(max_length = 40)
+    Address = models.CharField(max_length = 40)
+    Parent_Gurdian_Name = models.CharField(max_length = 40)
     email = models.EmailField()
-    phonenumber = models.IntegerField(null=True)
+    Phone_Number = models.IntegerField(null=True)
     datesubmitted = models.DateTimeField(auto_now_add=True)
-    allergiesspecial = models.CharField(max_length = 70)
+    Allergies_or_Special_Needs = models.CharField(max_length = 70)
 
     def __str__(self):
         return self.firstname
+
+class Sponsor(models.Model):
+    Firstname = models.CharField(max_length = 40)
+    Surname = models.CharField(max_length = 40)
+    email = models.EmailField()
+    Phone_Number = models.IntegerField(null=True)

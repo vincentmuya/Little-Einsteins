@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse, Http404,HttpResponseRedirect
-from .forms import ContactForm,EnrollForm
+from .forms import ContactForm,EnrollForm,SponsorForm
 from django.http import JsonResponse
 import datetime as dt
 from django.core.mail import mail_admins
@@ -19,11 +19,11 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
+            Name = form.cleaned_data['name']
             sender = form.cleaned_data['email']
             phonenumber = form.cleaned_data['phonenumber']
-            subject = "You have a new Feedback from {}:{}".format(name, sender)
-            questionfeedback = "Subject: {}\n\nquestionfeedback: {}\n\nphonenumber: {}".format(form.cleaned_data['subject'], form.cleaned_data['questionfeedback'], form.cleaned_data['phonenumber'])
+            subject = "You have a new Feedback from {}:{}".format(Name, sender)
+            Question_or_Feedback = "Subject: {}\n\nQuestion_or_Feedback: {}\n\nphonenumber: {}".format(form.cleaned_data['subject'], form.cleaned_data['questionfeedback'], form.cleaned_data['phonenumber'])
             mail_admins(subject, questionfeedback)
             contact =form.save(commit=False)
             contact.save()
@@ -46,16 +46,16 @@ def enroll(request):
     if request.method == 'POST':
         eform = EnrollForm(request.POST)
         if eform.is_valid():
-            firstname = eform.cleaned_data['firstname']
-            surname = eform.cleaned_data['surname']
+            Firstname = eform.cleaned_data['Firstname']
+            Surname = eform.cleaned_data['Surname']
             level = eform.cleaned_data['level']
-            address = eform.cleaned_data['address']
-            parentgurdianname = eform.cleaned_data['parentgurdianname']
+            Address = eform.cleaned_data['Address']
+            Parent_Gurdian_Name = eform.cleaned_data['Parent_Gurdian_Name']
             email = eform.cleaned_data['email']
-            phonenumber = eform.cleaned_data['phonenumber']
-            allergiesspecial = eform.cleaned_data['allergiesspecial']
+            Phone_Number = eform.cleaned_data['Phone_Number']
+            Allergies_or_Special_Needs = eform.cleaned_data['Allergies_or_Special_Needs']
             subject = "There is a new enrollment from {}:{}".format(parentgurdianname, email)
-            enroll = "firstname: {}\n\nsurname: {}\n\nlevel: {}\n\naddress: {}\n\nparentgurdianname: {}\n\nemail: {}\n\nphonenumber: {}\n\nallergiesspecial: {}".format(eform.cleaned_data['firstname'], eform.cleaned_data['surname'], eform.cleaned_data['level'], eform.cleaned_data['address'], eform.cleaned_data['parentgurdianname'], eform.cleaned_data['email'], eform.cleaned_data['phonenumber'], eform.cleaned_data['allergiesspecial'])
+            enroll = "Firstname: {}\n\nSurname: {}\n\nlevel: {}\n\nAddress: {}\n\nparentgurdianname: {}\n\nemail: {}\n\nphonenumber: {}\n\nallergiesspecial: {}".format(eform.cleaned_data['Firstname'], eform.cleaned_data['Surname'], eform.cleaned_data['level'], eform.cleaned_data['Address'], eform.cleaned_data['Parent_Gurdian_Name'], eform.cleaned_data['email'], eform.cleaned_data['Phone_Number'], eform.cleaned_data['Allergies_or_Special_Needs'])
             mail_admins(subject, enroll)
             enroll = eform.save(commit=False)
             enroll.save()
@@ -63,3 +63,20 @@ def enroll(request):
     else:
         eform = EnrollForm()
     return render(request, 'enroll.html', {'eform':eform})
+def sponsor(request):
+    if request.method == 'POST':
+        sform = SponsorForm(request.POST)
+        if sform.is_valid():
+            Firstname = sform.cleaned_data['Firstname']
+            Surname = sform.cleaned_data['Surname']
+            email = sform.cleaned_data['email']
+            Phone_Number = sform.cleaned_data['Phone_Number']
+            subject = "There is a new Sponsor {}:{}".format(Firstname, email)
+            Sponsor = "Firstname: {}\n\nSurname: {}\n\nemail: {}\n\nPhone_Number: {}".format(sform.cleaned_data['Firstname'], sform.cleaned_data['Surname'],sform.cleaned_data['email'], sform.cleaned_data['Phone_Number'])
+            mail_admins(subject, Sponsor)
+            sponsor = sform.save(commit=False)
+            sponsor.save()
+            return render(request, 'index.html')
+    else:
+        sform = SponsorForm
+    return render(request, "sponsor.html", {'sform':sform})

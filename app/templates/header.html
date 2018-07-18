@@ -2,7 +2,7 @@
 <div class="up">
 
 </div>
-<div style="position: relative;" class="panel panel-default">
+<div style="position: relative;" class="pd" >
   <div class="" style="position: absolute;">
     <div class="row">
       <div class="col-md-4">
@@ -21,12 +21,13 @@
 </div>
  <div class="panel-body">
    <ul class="panel-list" id="horizontal">
-   <li class="panael-menu" ><a href="{%url 'program'%}">Our Programs & Events</a></li>
+   <li class="panael-menu" ><a href="{%url 'program'%}">Programs & Events</a></li>
    <li class="panael-menu"><a href="{%url 'about'%}">About Us</a></li>
    <li class="panael-menu" ><a href="{%url 'enroll'%}">Enroll</a></li>
    <li class="panael-menu" ><a href="{%url 'sponsor'%}">Sponsor Sign Up</a></li>
    <li class="panael-menu"><a href="{%url 'about'%}">About Us</a></li>
    <li class="panael-menu"><a href="{%url 'contact'%}">Contact</a></li>
+   <li class="panael-menu"><a href="{%url 'location'%}">Location</a></li>
  </ul>
 </div>
  <div class="w3-panel ">
@@ -34,7 +35,11 @@
    <br>
  </div>
 </div>
+
 <style media="screen">
+.pd{
+  padding-bottom: 2px;
+}
 .up{
   position: relative;
     z-index: 60;
@@ -63,9 +68,10 @@ header{
 }
 
 .panel-body{
+  padding-left: 50px;
   text-align: center;
   font-family: 'Lato';
-  font-size: 20px;
+  font-size: 15px;
 }
 @media screen and (max-width: 650px) {
   ul#horizontal li {

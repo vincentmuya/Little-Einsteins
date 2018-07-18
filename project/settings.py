@@ -42,13 +42,14 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 ADMINS = [
     ('Vincent', 'vincentmuya13@gmail.com'),
-    
+
 ]
 
 MANAGERS = ADMINS
 
 INSTALLED_APPS = [
     'app',
+    'googlemaps',
     'tinymce',
     'bootstrap3',
     'django.contrib.admin',

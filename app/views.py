@@ -4,7 +4,15 @@ from .forms import ContactForm,EnrollForm,SponsorForm
 from django.http import JsonResponse
 import datetime as dt
 from django.core.mail import mail_admins
+import googlemaps
+import json
+from django.core.serializers.json import DjangoJSONEncoder
+from django.core import serializers
+import requests
 
+gmaps = googlemaps.Client(key='AIzaSyC14hiJhxMKNF4T4JCkDWyITjz8CoU2aco')
+geo_result = gmaps.geocode('address')
+print(geo_result)
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -80,3 +88,22 @@ def sponsor(request):
     else:
         sform = SponsorForm
     return render(request, "sponsor.html", {'sform':sform})
+
+def location(request):
+    test = "Code running"
+    if 'address' in request.GET and request.GET['address']:
+        address = request.GET.get('address')
+        geo_result = gmaps.geocode('address')
+        print(geo_result)
+        latitude = geo_result[0]['geometry']['location'].get('lat')
+        longitude = geo_result[0]['geometry']['location'].get('lng')
+        location = Location()
+        location.name = address
+        location.latitude = latitude
+        location.longitude = longitude
+        location.time = dt.datetime.now()
+        location.save()
+
+        return render(request, "location.html", {"latitude":latitude,"longitude":longitude, "address":address})
+    else:
+        return render(request, 'location.html', {"test":test})

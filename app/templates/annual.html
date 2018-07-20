@@ -1,0 +1,42 @@
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+
+  {%include 'header.html'%}
+  <br>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 30rem;">
+  <a href="{%url 'annual2018'%}"><img class="card-img-top" src="/static/img/af2018.png" alt="Card image cap"></a>
+</div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 30rem;">
+          <a href="#"><img class="card-img-top" src="/static/img/af17.png" alt="Card image cap"></a>
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+  </div>
+</body>
+<br>
+{%include 'footer.html'%}
+<style media="screen">
+  .card-img-top{
+    height: 200px;
+    width: 300px;
+  }
+  .card-img-top1{
+    height: 200px;
+    width: 300px;
+  }
+  .card{
+    box-shadow:5px 10px 5px 10px #888888;
+  }
+</style>
+  {%endblock %}

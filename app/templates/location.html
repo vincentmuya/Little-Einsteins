@@ -5,8 +5,8 @@
   <head>
   <style media="screen">
 #map {
-height: 50%;
-width: 50%;
+height: 60%;
+width: 70%;
 float: right;
 }
 body,html {
@@ -116,7 +116,12 @@ var map;
 {% comment %}
 <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script> {% endcomment %} {% endblock %}
 </head>
-
+<form class="navbar-form navbar-left" action="#" class="form-inline" role="search">
+  <div class="form-group">
+    <input class="form-control mr-sm-2 mb-2" type="search" placeholder="enter your location" aria-label="Search" name="">
+  </div>
+  <a href="#"><button type="search" class="btn btn-default">Search</button></a>
+</form>
 <div id="map"></div>
 </html>
 {%include 'footer.html'%}

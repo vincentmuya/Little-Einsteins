@@ -111,3 +111,5 @@ def annual(request):
     return render(request, 'annual.html')
 def annual2018(request):
     return render(request, 'annual2018.html')
+def learn(request):
+    return render(request, 'learn.html')

@@ -4,6 +4,9 @@
   <br>
 <body>
   <div class="container">
+    <div class="found">
+    <h1>Little Einsteins Science Fair</h1>
+    </div>
     <h4>Little Einsteins East Africa holds an annual Science Fair in Nairobi Kenya. The Science Fair, showcases projects from students as young as 3 years to 12 years old from various schools throughout Kenya in the Science, Technology,
 Engineering and Mathematics fields. It brings together, Educators, Students, Schools, Parents and STEM Enthusiasts together with vendors of Family and children products for a day of STEM fun and competitiveness.</h4>
     <div class="row">
@@ -26,11 +29,23 @@ Engineering and Mathematics fields. It brings together, Educators, Students, Sch
     </div>
     <br>
     <a href="{%url 'learn'%}"><h4>Learn more about being a Sponsor or Vendor at our annual Science Fair.</h4></a>
+    <img class="focus" src="/static/img/STEM-logo.png" alt="">
   </div>
 </body>
 <br>
 {%include 'footer.html'%}
 <style media="screen">
+.focus{
+  height: 20%;
+  width: 20%;
+}
+h1{
+  font-family: 'Love Ya Like A Sister';
+  text-align: center;
+}
+.found{
+  background-color: orange;
+}
 h4{
   font-family:'Lora'
 }

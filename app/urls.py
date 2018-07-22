@@ -13,6 +13,7 @@ urlpatterns=[
     url(r'^location/$',views.location,name='location'),
     url(r'^annual/$',views.annual,name='annual'),
     url(r'^learn/$',views.learn,name='learn'),
+    url(r'^foundation/$',views.foundation,name='foundation'),
     url(r'^annual2018/$',views.annual2018,name='annual2018'),
     url(r'^ajax/newsletter/$', views.newsletter, name='newsletter'),
     ]

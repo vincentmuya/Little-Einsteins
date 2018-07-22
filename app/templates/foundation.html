@@ -1,0 +1,55 @@
+{%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
+
+  {%include 'header.html'%}
+<!-- <img class='fon' src="/static/img/Foundation.png" alt=""> -->
+<div class="container">
+  <div class="found">
+    <h1>What Little Einsteins Foundation IS About</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <img class='sa2' src="/static/img/sasha2.png" alt="">
+    </div>
+    <div class="col-md-6">
+      <p>The Little Einstein's Foundation is not for profit organisation that teaches Science,Technology,Engineering and Mathematics in a fun and real life application way.
+        The foundation provides these activities to under privilaged children and and in doing so provides skills that address real life solutions to daily challanges</p>
+        <img src="/static/img/pro0.png" alt="" class="together">
+      </div>
+      <div class="col-md-3">
+        <img class='fon' src="/static/img/Foundation.png" alt="">
+      </div>
+</div>
+<img class="focus" src="/static/img/STEM-logo.png" alt="">
+</div>
+<br>
+{%include 'footer.html'%}
+<style media="screen">
+.focus{
+  height: 20%;
+  width: 20%;
+}
+.together{
+  height: 60%;
+  width: 70%;
+  margin-left: 60px;
+  border-radius: 10px;
+}
+h1{
+  font-family: "Love Ya Like A Sister";
+}
+p{
+  font-family: 'Lora'
+}
+.found{
+  background-color: orange;
+}
+.fon{
+  height: 90%;
+  width: 90%;
+}
+.sa2{
+  height: 55%;
+  width: 60%;
+}
+</style>
+  {%endblock%}

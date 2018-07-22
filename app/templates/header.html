@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="w3-panel ">
-    <!-- <button type="button" class="btn btn-success" name="button">Find Location</button> -->
+    <a href="{%url 'location'%}"><button type="button" class="btn btn-success" name="button">Find Location</button></a>
     <br>
     <br>
 </div>
@@ -25,9 +25,9 @@
    <li class="panael-menu"><a href="{%url 'about'%}">About Us</a></li>
    <li class="panael-menu" ><a href="{%url 'enroll'%}">Enroll</a></li>
    <li class="panael-menu"><a href="{%url 'annual'%}">Annual Science Fairs</a></li>
+   <li class="panael-menu"><a href="{%url 'foundation'%}">East Africa Foundation</a></li>
    <li class="panael-menu" ><a href="{%url 'sponsor'%}">Sponsor Sign Up</a></li>
    <li class="panael-menu"><a href="{%url 'contact'%}">Contact</a></li>
-   <li class="panael-menu"><a href="{%url 'location'%}">Location</a></li>
  </ul>
 </div>
  <div class="w3-panel ">
@@ -49,17 +49,11 @@
 ul#horizontal li {
   display: inline;
   list-style: none;
-  padding: 10px;
+  padding: 8px;
   color: black;
 }
 a{
   color: black;
-}
-header{
-
-}
-.logo{
-  /*height: 180px;*/
 }
 .w3-panel{
   background-color:#4da6ff;
@@ -70,8 +64,7 @@ header{
 .panel-body{
   padding-left: 50px;
   text-align: center;
-  font-family: 'Lato';
-  font-size: 17px;
+  font-size: 15px;
 }
 @media screen and (max-width: 650px) {
   ul#horizontal li {

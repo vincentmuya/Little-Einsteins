@@ -2,11 +2,62 @@
 
 {%include 'header.html'%}
 <div class="container">
-  <h1>Sponsor Sign Up Form</h1>
-  <form method="post" novalidate>
-    {% csrf_token %}
-      {% bootstrap_form sform %}
-    <button class="btn btn-primary" type="submit">Submit</button>
-  </form>
+  <div class="found">
+  <h1>Virtual STEM Learning</h1>
   </div>
+<div class="row">
+  <div class="col-md-3">
+<img class="sasha" src="/static/img/sasha.png" alt="" height='330px' width="300px">
+  </div>
+  <div class="col-md-6">
+    <object data="http://www.youtube.com/embed/vbBMnWKTAFA"
+   width="560" height="315"></object>
+   <a href="https://www.youtube.com/channel/UCUo2N5VLMapIILE09_BG7Uw" target="_blank"><h4>Watch More On Youtube</h4></a>
+  </div>
+  <div class="col-md-3">
+    <img class="play" src="/static/img/play.png" alt="">
+    <p>Download our E-learning app</p>
+<img class="kabi" src="/static/img/KABI.png" alt="" height='290' width="230">
+  </div>
+</div>
+  </div>
+  {%include 'footer.html'%}
+  <style media="screen">
+  .play{
+    height: 30%;
+    width: 30%;
+  }
+    h1{
+      font-family: "Love Ya Like A Sister";
+      text-align: center;
+    }
+    .found{
+      background-color: orange;
+    }
+    @media screen and (max-width: 650px) {
+      h1{
+        text-align: center;
+        font-family: "Love Ya Like A Sister";
+        font-size: 20px;
+    }
+    .kabi{
+      display: none;
+    }
+    .sasha{
+      height: 80px;
+      width: 80px;
+    }
+    p,h4{
+      font-size: 12px;
+      font-family: 'Lora';
+    }
+    object{
+      width: 100%;
+    }
+    .play{
+      width: 10%;
+      height: 10%;
+    }
+  }
+  </style>
   {%endblock%}

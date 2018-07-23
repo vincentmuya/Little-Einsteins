@@ -8,7 +8,7 @@
   </div>
   <div class="row">
     <div class="col-md-3">
-      <img class='sa2' src="/static/img/sasha2.png" alt="">
+      <img class='fon' src="/static/img/Foundation.png" alt="">
     </div>
     <div class="col-md-6">
       <p>The Little Einstein's Foundation is not for profit organisation that teaches Science,Technology,Engineering and Mathematics in a fun and real life application way.
@@ -16,18 +16,13 @@
         <img src="/static/img/pro0.png" alt="" class="together">
       </div>
       <div class="col-md-3">
-        <img class='fon' src="/static/img/Foundation.png" alt="">
+        <img class='sa2' src="/static/img/sasha2.png" alt="">
       </div>
 </div>
-<img class="focus" src="/static/img/STEM-logo.png" alt="">
 </div>
 <br>
 {%include 'footer.html'%}
 <style media="screen">
-.focus{
-  height: 20%;
-  width: 20%;
-}
 .together{
   height: 60%;
   width: 70%;
@@ -50,6 +45,29 @@ p{
 .sa2{
   height: 55%;
   width: 60%;
+}
+@media screen and (max-width: 650px) {
+  h1{
+    text-align: center;
+    font-family: "Love Ya Like A Sister";
+    font-size: 20px;
+  }
+  p{
+    font-size: 12px;
+    font-family: 'Lora'
+  }
+  .fon{
+    height: 20%;
+    width: 25%;
+  }
+  .sa2{
+    display: none;
+  }
+  .together{
+    height: 60%;
+    width: 80%;
+    border-radius: 10px;
+  }
 }
 </style>
   {%endblock%}

@@ -21,7 +21,6 @@
        <p class='about' >Science, Technology, Engineering and Math learning for kids in a fun and real-life application way.<strong>Science is Fun!</strong><br>
        Little Einsteins East Africa seeks to inspire and teach students about the world of science, technology, engineering and math through entertaining hands-on activities.
         Our aim is to guide a new generation of young science explorers through genuine passion in learning how the world works. </p>
-        <img class="focus" src="/static/img/STEM-logo.png" alt="">
         <p></p>
        <img src="/static/img/Chemistry.gif" alt="" class="labs" height="150px;">
       </div>
@@ -43,11 +42,6 @@
       {%include 'footer.html'%}
   </body>
   <style media="screen">
-  .focus{
-    float: right;
-    height: 45%;
-    width: 45%;
-  }
   .about{
     font-family: "Lora";
   }
@@ -81,22 +75,28 @@
     height: 8px;
 }
   @media screen and (max-width: 650px) {
-    .card{
-      box-shadow: 1px 1px 10px #000;
-      border-radius: 20px;
-      width: 245px;
-      height: 470px;
+    #but{
+      position: absolute;
+      margin-left: 200px;
+      vertical-align: middle;
+      font-family: 'Lato', sans-serif;
+      font-size: 10px;
+      height: 30px;
+      font-weight: bold;
+      top: 5px;
+      background-color: #FFA500;
     }
+
     h1{
       text-align: center;
       font-family: "Love Ya Like A Sister";
       font-size: 20px;
     }
     h4{
-      font-family: "Times New Roman";
+      font-family: "Lora";
       font-size: 15px
     }
-    h5, p , li{
+    h5, p{
       font-size: 12px;
     }
     h4{

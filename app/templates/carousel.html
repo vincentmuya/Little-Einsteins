@@ -14,8 +14,8 @@
                 <img src="/static/img/SLIDE1.jpg"  width="1300" height="360" />
                 <div class="top-left" >
                     <h1 >Kids Learn <br>By Doing</h1>
-                        <h4 >Learning is not attained by chance,<br> it must be sought for with ardor and attended <br> to with diligence.</h4>
-                        <h4><em>By:Abigail Adams</em></h4>
+                        <h4 class="capbo" >Learning is not attained by chance,<br> it must be sought for with ardor and attended <br> to with diligence.</h4>
+                        <h4 class="capbo"><em>By:Abigail Adams</em></h4>
                 </div>
             </div>
 
@@ -24,7 +24,7 @@
                 <img src="/static/img/SLIDE2.jpg" width="640" height="360"  />
                 <div class="top-left">
                     <h1 class="top" >What We Teach</h1>
-                        <h4>We teach scientific concepts in a way <br>that children understand and remember.</h4>
+                        <h4 class="capbo">We teach scientific concepts in a way <br>that children understand and remember.</h4>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                 <img src="/static/img/IMG_6269.jpg" width="640" height="550px" >
                 <div class="top-left" >
                     <h1 class="top">Why We Are Different</h1>
-                    <h4>Our aim is to guide a new generation <br>of young science explorers through genuine passion<br> in learning how the world works.</h4>
+                    <h4 class="capbo">Our aim is to guide a new generation <br>of young science explorers through genuine passion<br> in learning how the world works.</h4>
                 </div>
             </div>
 </div>
@@ -49,7 +49,41 @@
         </div>
   </div>
   <style media="screen">
+  .top-left {
+  font-size: 20px;
+  position: absolute;
+  color: white;
+  top: 120px;
+  left: 60px;
+  display: block;
+}
+h4{
+display: block;
+}
+.carousel-control.right {
+  width:20px;
+}
+.carousel-control.left {
+width: 20px;
+}
+.carousel-inner > .item > img {
+  width:100%;
+  height:100%;
+  /*margin-bottom: 30px;*/
+}
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  }
+  ul#horizontal-list li {
+    display: inline;
+  }
   @media screen and (max-width: 650px) {
+    .top-left{
+      position: absolute;
+      color: white;
+      top: 10px;
+    }
     .carousel-caption{
       font-size: 8px;
       color: white;
@@ -61,40 +95,14 @@
   .carousel-indicators{
     display: none;
   }
-
+.capbo{
+  font-size: 8px;
+  font-family: 'Lato';
+}
   .carousel-caption-body{
     color: white;
     font-size: 40%;
   }
-    }
-    .top-left {
-    font-size: 20px;
-    position: absolute;
-    color: white;
-    top: 120px;
-    left: 60px;
-    display: block;
-}
-h4{
-  display: block;
-}
-  .carousel-control.right {
-    width:20px;
-  }
-.carousel-control.left {
-  width: 20px;
-}
-  .carousel-inner > .item > img {
-    width:100%;
-    height:100%;
-    /*margin-bottom: 30px;*/
-  }
-  ul#horizontal-list {
-    min-width: 696px;
-    list-style: none;
-    }
-    ul#horizontal-list li {
-      display: inline;
     }
 
 {% endblock%}

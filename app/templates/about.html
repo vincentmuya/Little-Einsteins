@@ -26,16 +26,15 @@
   <img class='do' src="/static/img/KABI.png" alt="" height='60%' width="60%">
 </div>
   <div class="col-md-7">
-    <img class='do' src="/static/img/Infographic.jpg" alt="" height='110%' width="110%">
-    <img class="focus" src="/static/img/STEM-logo.png" alt="">
+    <img class='graph' src="/static/img/Infographic.jpg" alt="">
   </div>
   </div>
 </div>
 {%include 'footer.html'%}
 <style media="screen">
-.focus{
-  height: 30%;
-  width: 30%;
+.graph{
+  height: 110%;
+  width: 110%;
 }
 h2,p{
   font-family: 'Lora'
@@ -59,6 +58,10 @@ h2{
   text-align: center;
 }
 @media screen and (max-width: 650px) {
+  .graph{
+    height: 110%;
+    width: 100%;
+  }
   .prog{
     width: 90%;
     height: 200px;
@@ -66,7 +69,7 @@ h2{
   h1,h2{
     font-size: 20px;
   }
-  p, li, h5{
+  p, h5{
     font-size: 12px;
   }
   .do{

@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="w3-panel ">
-    <!-- <a href="{%url 'location'%}"><button type="button" class="btn btn-success" name="button">Find Location</button></a> -->
+    <a href="{%url 'location'%}"><button type="button" id="location" class="btn btn-success" name="button">Find Location</button></a>
     <br>
     <br>
 </div>
@@ -89,6 +89,9 @@ a{
   font-size: 15px;
 }
 @media screen and (max-width: 650px) {
+  #location{
+    height: 25px;
+  }
   ul#horizontal li {
     display: none;
     list-style: none;

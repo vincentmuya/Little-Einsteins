@@ -24,12 +24,11 @@
           <br id="fa">
           <br id="fa">
           <br>
-        <a href="" target="_blank" class="details">Home</a>
-        <a href="{%url 'location'%}" class="details">Locations</a>
-        <a href="#" target="_blank" class="details">FAQs</a>
-        <a href="#" target="_blank" class="details">Contact</a>
+        <a href="{%url 'index'%}" target="_blank" class="details">Home</a>
+        <a href="" target="_blank" class="details">FAQs</a>
+        <a href="{%url 'contact'%}" target="_blank" class="details">Contact</a>
         <a href="#" target="_blank" class="details">Privacy / Terms</a>
-        <a href="#" target="_blank" class="details">Sitemap</a>
+        <a href="{%url 'location'%}" target="_blank" class="details">Locations/Sitemap</a>
         <div class="col-md-5">
         </div>
           </div>
@@ -133,7 +132,7 @@ color: white;
     width: 45px;
   }
   .details{
-    padding-left: 17px;
+    padding-left: 30px;
     text-align: center;
     font-size: 5px;
   margin-left: 0px;

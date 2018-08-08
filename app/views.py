@@ -27,12 +27,12 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            Name = form.cleaned_data['name']
+            Name = form.cleaned_data['Name']
             sender = form.cleaned_data['email']
-            phonenumber = form.cleaned_data['phonenumber']
+            Phone_Number = form.cleaned_data['Phone_Number']
             subject = "You have a new Feedback from {}:{}".format(Name, sender)
-            Question_or_Feedback = "Subject: {}\n\nQuestion_or_Feedback: {}\n\nphonenumber: {}".format(form.cleaned_data['subject'], form.cleaned_data['questionfeedback'], form.cleaned_data['phonenumber'])
-            mail_admins(subject, questionfeedback)
+            Question_or_Feedback = "Question_or_Feedback: {}\n\nPhone_Number: {}".format(form.cleaned_data['Question_or_Feedback'], form.cleaned_data['Phone_Number'])
+            mail_admins(subject, Question_or_Feedback)
             contact =form.save(commit=False)
             contact.save()
             return render(request, 'index.html')

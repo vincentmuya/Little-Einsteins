@@ -8,7 +8,6 @@ class Contact(models.Model):
     Name = models.CharField(max_length = 40)
     email = models.EmailField()
     Phone_Number = models.IntegerField(null=True)
-    subject = models.CharField(max_length=40, null = True)
     Question_or_Feedback = HTMLField()
 
     def __str__(self):

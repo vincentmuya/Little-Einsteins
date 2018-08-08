@@ -62,8 +62,8 @@ def enroll(request):
             email = eform.cleaned_data['email']
             Phone_Number = eform.cleaned_data['Phone_Number']
             Allergies_or_Special_Needs = eform.cleaned_data['Allergies_or_Special_Needs']
-            subject = "There is a new enrollment from {}:{}".format(parentgurdianname, email)
-            enroll = "Firstname: {}\n\nSurname: {}\n\nlevel: {}\n\nAddress: {}\n\nparentgurdianname: {}\n\nemail: {}\n\nphonenumber: {}\n\nallergiesspecial: {}".format(eform.cleaned_data['Firstname'], eform.cleaned_data['Surname'], eform.cleaned_data['level'], eform.cleaned_data['Address'], eform.cleaned_data['Parent_Gurdian_Name'], eform.cleaned_data['email'], eform.cleaned_data['Phone_Number'], eform.cleaned_data['Allergies_or_Special_Needs'])
+            subject = "There is a new enrollment from {}:{}".format(Parent_Gurdian_Name, email)
+            enroll = "Firstname: {}\n\nSurname: {}\n\nlevel: {}\n\nAddress: {}\n\nParent_Gurdian_Name: {}\n\nemail: {}\n\nphonenumber: {}\n\nallergiesspecial: {}".format(eform.cleaned_data['Firstname'], eform.cleaned_data['Surname'], eform.cleaned_data['level'], eform.cleaned_data['Address'], eform.cleaned_data['Parent_Gurdian_Name'], eform.cleaned_data['email'], eform.cleaned_data['Phone_Number'], eform.cleaned_data['Allergies_or_Special_Needs'])
             mail_admins(subject, enroll)
             enroll = eform.save(commit=False)
             enroll.save()

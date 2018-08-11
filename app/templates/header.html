@@ -15,9 +15,12 @@
     </div>
   </div>
   <div class="w3-panel ">
+    <div class="juu ">
     <a href="{%url 'location'%}"><button type="button" id="location" class="btn btn-success" name="button">Find Location</button></a>
+    <a href="https://play.google.com/store/apps" target="_blank"><img class="play" src="http://style.anu.edu.au/_anu/images/icons/icon-android-app.png" alt="" style="position: absolute;"></a>
     <br>
     <br>
+    </div>
 </div>
  <div class="panel-body">
    <nav role="navigation">
@@ -55,6 +58,11 @@
 </div>
 
 <style media="screen">
+.play{
+  height: 19%;
+  width: 8%;
+  border-radius: 5px;
+}
 #menuToggle{
   display: none;
 }
@@ -89,9 +97,18 @@ a{
   font-size: 15px;
 }
 @media screen and (max-width: 650px) {
+  .juu{
+
+  }
+  .play{
+    width: 17%;
+    height: 30%;
+  }
   #location{
     height: 25px;
-    margin-left: 250px;
+    margin-left: 158px;
+    width: 75px;
+    font-size: 8px;
   }
   ul#horizontal li {
     display: none;

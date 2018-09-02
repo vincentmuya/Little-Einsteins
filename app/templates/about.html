@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
   {%include 'header.html'%}
   <div class="about">
 <img class='prog' src="/static/img/IMG_5940.jpg" alt="" width="100%">
@@ -31,50 +33,4 @@
   </div>
 </div>
 {%include 'footer.html'%}
-<style media="screen">
-.graph{
-  height: 110%;
-  width: 110%;
-}
-h2,p{
-  font-family: 'Lora'
-}
-.do{
-  border-radius: 10px;
-}
-.about{
-  position: relative;
-}
-h1{
-  font-family: "Love Ya Like A Sister";
-}
-.glance{
-  background: #0091d1;
-  border-radius: 10px;
-  color: white;
-  font-family: 'Lora'
-}
-h2{
-  text-align: center;
-}
-@media screen and (max-width: 650px) {
-  .graph{
-    height: 110%;
-    width: 100%;
-  }
-  .prog{
-    width: 90%;
-    height: 200px;
-  }
-  h1,h2{
-    font-size: 20px;
-  }
-  p, h5{
-    font-size: 12px;
-  }
-  .do{
-    display: none;
-  }
-}
-</style>
   {%endblock %}

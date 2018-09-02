@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <link rel="stylesheet" href="{% static 'css/learn.css' %}">
+</head>
   {%include 'header.html'%}
   <div class="container">
     <div class="found">
@@ -20,19 +22,4 @@
   </div>
   </div>
   {%include 'footer.html'%}
-  <style media="screen">
-  .book{
-    height: 180px;
-  }
-  .found{
-    background-color: orange;
-  }
-    h1{
-      font-family: "Love Ya Like A Sister";
-      text-align: center;
-    }
-    h4, .why{
-      font-family: "Lora"
-    }
-  </style>
   {%endblock%}

@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
   {%include 'header.html'%}
 <div class="container">
   <div class="found">
@@ -43,43 +45,6 @@
 </div>
 <br>
 {%include 'footer.html'%}
-<style media="screen">
-.found{
-  background-color: orange;
-  text-align: center;
-  font-family: 'Love Ya Like A Sister'
-}
-h4,p,h5 {
-  font-family:'Lora'
-}
-h5{
-  font-size: 21px;
-}
-  .prog{
-    margin-left: 5%;
-  }
-  .contact{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: #f2f0f0;
-    border-radius: 10px;
-  }
-  @media screen and (max-width: 650px) {
-    h1{
-      text-align: center;
-      font-family: "Love Ya Like A Sister";
-      font-size: 20px;
-    }
-    p{
-      font-size: 12px;
-      font-family: 'Lora'
-    }
-    h4{
-      font-family: "Lora";
-      font-size: 15px
-    }
-  }
-</style>
 {%endblock%}
 {% block scripts %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

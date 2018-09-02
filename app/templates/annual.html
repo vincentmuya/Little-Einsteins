@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <link rel="stylesheet" href="{% static 'css/annual.css' %}">
+</head>
   {%include 'header.html'%}
   <br>
 <body>
@@ -33,50 +35,4 @@ Engineering and Mathematics fields. It brings together, Educators, Students, Sch
 </body>
 <br>
 {%include 'footer.html'%}
-<style media="screen">
-h1{
-  font-family: 'Love Ya Like A Sister';
-  text-align: center;
-}
-.found{
-  background-color: orange;
-}
-h4{
-  font-family:'Lora'
-}
-  .card-img-top{
-    height: 248px;
-    width: 340px;
-  }
-  .card-img-top1{
-    height: 248px;
-    width: 340px;
-  }
-  .card{
-    box-shadow:5px 10px 5px 10px #888888;
-  }
-  @media screen and (max-width: 650px) {
-    h1{
-      text-align: center;
-      font-family: "Love Ya Like A Sister";
-      font-size: 20px;
-  }
-  h4{
-    font-family: "Lora";
-    font-size: 15px
-}
-.card-img-top{
-  height: 200px;
-  width: 300px;
-}
-.card-img-top1{
-  height: 200px;
-  width: 300px;
-}
-.card{
-  box-shadow:5px 5px 5px 5px #888888;
-  padding: 5px;
-}
-  }
-</style>
   {%endblock %}

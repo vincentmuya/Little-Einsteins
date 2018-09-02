@@ -1,9 +1,12 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
 <head>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" />
+  <link href='https://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
   {%include 'header.html'%}
@@ -41,81 +44,4 @@
   <p></p>
       {%include 'footer.html'%}
   </body>
-  <style media="screen">
-  .about{
-    font-family: "Lora";
-  }
-  .banner{
-    position: relative;
-    width: 100%;
-  }
-  a{
-    color: black;
-  }
-  #but{
-    position: absolute;
-    margin-left: 700px;
-    vertical-align: middle;
-    font-family: 'Lato', sans-serif;
-    font-size: 22px;
-    height: 60px;
-    font-weight: bold;
-    bottom: 40px;
-    background-color: #FFA500;
-  }
-  p{
-    font-family:'Arial'
-  }
-  h1{
-    text-align: center;
-    font-family: "Love Ya Like A Sister";
-  }
-  .vl {
-    border-right: 2px solid grey;
-    height: 8px;
-}
-  @media screen and (max-width: 650px) {
-    #but{
-      position: absolute;
-      margin-left: 200px;
-      vertical-align: middle;
-      font-family: 'Lato', sans-serif;
-      font-size: 10px;
-      height: 30px;
-      font-weight: bold;
-      top: 5px;
-      background-color: #FFA500;
-    }
-
-    h1{
-      text-align: center;
-      font-family: "Love Ya Like A Sister";
-      font-size: 20px;
-    }
-    h4{
-      font-family: "Lora";
-      font-size: 15px
-    }
-    h5, p{
-      font-size: 12px;
-    }
-    h4{
-      font-size: 15px;
-    }
-    h2{
-      font-size: 20px;
-    }
-    .kabi{
-      display: none;
-    }
-    .do{
-      width: 200px;
-      height: 200px;
-      float: left;
-    }
-    .vl,.labs{
-      display: none;
-    }
-  }
-  </style>
   {%endblock%}

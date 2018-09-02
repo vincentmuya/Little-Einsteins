@@ -3,19 +3,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <style media="screen">
-#map {
-height: 70%;
-width: 72%;
-float: right;
-}
-body,html {
-height: 100%;
-margin: 0;
-padding: 0;
-}
-</style>
+    <link rel="stylesheet" href="{% static 'css/location.css' %}">
+</head>
+<body>
+  <div class="found">
+  <h1>Find Little Einsteins</h1>
+  </div>
+  <div id="map"></div>
 
+      <b>Enter Your Location: </b>
+      <input type="text" id="start" class="controls" type="text" placeholder="Enter Your Location">
+      <br>
+      <br>
+      <b>End: </b>
+      <select id="end">
+        <option>891 Amboseli Road, Off Convent Drive, Lavington</option>
+      </select>
+      <img class='sa2' src="/static/img/sasha2.png" alt="">
+</body>
+</html>
+{%include 'footer.html'%}
+{% endblock %}
 <!--scripts  -->
 {% block scripts %}
 <!-- jquery -->
@@ -78,49 +86,3 @@ function initMap() {
 
 {% comment %}
 <script src="{% static 'js/main.js' %}" type="text/javascript" charset="utf-8"></script> {% endcomment %} {% endblock %}
-</head>
-<body>
-  <div class="found">
-  <h1>Find Little Einsteins</h1>
-  </div>
-  <div id="map"></div>
-
-      <b>Enter Your Location: </b>
-      <input type="text" id="start" class="controls" type="text" placeholder="Enter Your Location">
-      <br>
-      <br>
-      <b>End: </b>
-      <select id="end">
-        <option>891 Amboseli Road, Off Convent Drive, Lavington</option>
-      </select>
-      <img class='sa2' src="/static/img/sasha2.png" alt="">
-</body>
-</html>
-<style media="screen">
-.sa2{
-  height: 70%;
-  width: 25%;
-}
-h1{
-  font-family: "Love Ya Like A Sister";
-  text-align: center;
-}
-.found{
-  background-color: orange;
-}
-@media screen and (max-width: 650px) {
-  .sa2{
-    display: none;
-  }
-  #map{
-    width: 100%;
-  }
-  h1{
-    text-align: center;
-    font-family: "Love Ya Like A Sister";
-    font-size: 20px;
-  }
-}
-</style>
-{% endblock %}
-{%include 'footer.html'%}

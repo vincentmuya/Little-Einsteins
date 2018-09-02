@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <link rel="stylesheet" href="{% static 'css/enroll.css' %}">
+</head>
   {%include 'header.html'%}
   <div class="container">
     <h1>Registration Form 2018-2019</h1>
@@ -17,29 +19,4 @@ our activities.</h3>
   </div>
   <br>
   {%include 'footer.html'%}
-  <style media="screen">
-  h1{
-    text-align: center;
-    font-family: "Love Ya Like A Sister";
-  }
-    .enroll{
-    height: 100px;
-    width: 300px;
-    float: right;
-    }
-    @media screen and (max-width: 650px) {
-      .enroll{
-        height: 50px;
-        width: 170px;
-      }
-      h1{
-        text-align: center;
-        font-family: "Love Ya Like A Sister";
-        font-size: 20px;
-    }
-    h3{
-      font-family: "Lora";
-      font-size: 15px
-  }
-  </style>
   {%endblock%}

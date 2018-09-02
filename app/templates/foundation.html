@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+</head>
   {%include 'header.html'%}
 <!-- <img class='fon' src="/static/img/Foundation.png" alt=""> -->
 <div class="container">
@@ -22,53 +24,4 @@
 </div>
 <br>
 {%include 'footer.html'%}
-<style media="screen">
-.together{
-  height: 60%;
-  width: 70%;
-  margin-left: 60px;
-  border-radius: 10px;
-}
-h1{
-  font-family: "Love Ya Like A Sister";
-  text-align: center;
-}
-p{
-  font-family: 'Lora'
-}
-.found{
-  background-color: orange;
-}
-.fon{
-  height: 90%;
-  width: 90%;
-}
-.sa2{
-  height: 55%;
-  width: 60%;
-}
-@media screen and (max-width: 650px) {
-  h1{
-    text-align: center;
-    font-family: "Love Ya Like A Sister";
-    font-size: 20px;
-  }
-  p{
-    font-size: 12px;
-    font-family: 'Lora'
-  }
-  .fon{
-    height: 20%;
-    width: 25%;
-  }
-  .sa2{
-    display: none;
-  }
-  .together{
-    height: 60%;
-    width: 80%;
-    border-radius: 10px;
-  }
-}
-</style>
   {%endblock%}

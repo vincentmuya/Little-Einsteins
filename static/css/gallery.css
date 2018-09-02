@@ -1,9 +1,5 @@
-.item img {
-width: 100%;
-}
-
-@media screen and (max-width: 650px) {
-
-.tab-content, .dont{
-  display: none;
+.carousel-caption-body{
+  font-family: "Love Ya Like A Sister";
+  font-size: 30px;
+  padding-bottom:40px;
 }

@@ -1,5 +1,7 @@
 {%extends 'base.html'%} {%load staticfiles%} {%block content%} {% load bootstrap3 %}
-
+<head>
+  <link rel="stylesheet" href="{% static 'css/sponsor.css' %}">
+</head>
 {%include 'header.html'%}
 <div class="container">
   <div class="found">
@@ -20,34 +22,4 @@
 </div>
   </div>
   {%include 'footer.html'%}
-  <style media="screen">
-    h1{
-      font-family: "Love Ya Like A Sister";
-      text-align: center;
-    }
-    .found{
-      background-color: orange;
-    }
-    @media screen and (max-width: 650px) {
-      h1{
-        text-align: center;
-        font-family: "Love Ya Like A Sister";
-        font-size: 20px;
-    }
-    .kabi{
-      display: none;
-    }
-    .sasha{
-      height: 80px;
-      width: 80px;
-    }
-    p,h4{
-      font-size: 12px;
-      font-family: 'Lora';
-    }
-    object{
-      width: 100%;
-    }
-  }
-  </style>
   {%endblock%}
